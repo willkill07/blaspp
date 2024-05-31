@@ -22,7 +22,7 @@
 
 /* f2c, hence MacOS Accelerate, returns double instead of float
  * for sdot, slange, clange, etc. */
-#if defined(BLAS_HAVE_F2C)
+#if defined(BLAS_HAVE_F2C) && !defined(ACCELERATE_NEW_LAPACK)
     typedef double blas_float_return;
 #else
     typedef float blas_float_return;

@@ -339,14 +339,14 @@ def blas():
             ['macOS Accelerate (new)',
              {'LIBS': '-framework Accelerate',
               'CXXFLAGS': define('HAVE_ACCELERATE')
-                        + ' -DACCELERATE_NEW_LAPACK'}])
+                        + ' -DACCELERATE_NEW_LAPACK=1'}])
 
         # macOS 13.3, g++ 12.2 requires extra flag to parse Apple's headers.
         choices.append(
             ['macOS Accelerate (new, -flax-vector-conversions)',
              {'LIBS': '-framework Accelerate',
               'CXXFLAGS': define('HAVE_ACCELERATE')
-                        + ' -DACCELERATE_NEW_LAPACK -flax-vector-conversions'}])
+                        + ' -DACCELERATE_NEW_LAPACK=1 -flax-vector-conversions'}])
 
         choices.append(
             ['macOS Accelerate',
