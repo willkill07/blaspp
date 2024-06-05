@@ -41,6 +41,13 @@ inline char   diag2char( Diag   diag   ) { return char(diag);   }
 inline char   side2char( Side   side   ) { return char(side);   }
 inline char format2char( Format format ) { return char(format); }
 
+inline char to_char( Layout layout ) { return char(layout); }
+inline char to_char( Op     op     ) { return char(op);     }
+inline char to_char( Uplo   uplo   ) { return char(uplo);   }
+inline char to_char( Diag   diag   ) { return char(diag);   }
+inline char to_char( Side   side   ) { return char(side);   }
+inline char to_char( Format format ) { return char(format); }
+
 // -----------------------------------------------------------------------------
 // Convert enum to LAPACK-style string.
 inline const char* layout2str( Layout layout )
