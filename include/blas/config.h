@@ -12,7 +12,7 @@
 
 #ifndef blas_int
     #if defined(BLAS_ILP64)
-        typedef int64_t blas_int;
+        typedef long blas_int;
     #else
         typedef int blas_int;
     #endif

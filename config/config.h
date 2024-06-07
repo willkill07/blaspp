@@ -20,8 +20,8 @@
 
 //------------------------------------------------------------------------------
 #if defined(BLAS_ILP64) || defined(LAPACK_ILP64)
-    typedef int64_t blas_int;
-    typedef int64_t lapack_int;
+    typedef long blas_int;
+    typedef long lapack_int;
 #else
     typedef int blas_int;
     typedef int lapack_int;

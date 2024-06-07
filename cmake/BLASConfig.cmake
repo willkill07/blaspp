@@ -31,7 +31,7 @@ set( found false )
 if (NOT found)
     if ("${BLAS_LIBRARIES}" MATCHES "-framework Accelerate|Accelerate.framework")
         message( "${blue}   Accelerate framework${plain}" )
-        list( APPEND blaspp_defs_ "-DBLAS_HAVE_ACCELERATE=1" "-DACCELERATE_NEW_LAPACK=1")
+        list( APPEND blaspp_defs_ "-DBLAS_HAVE_ACCELERATE=1" "-DACCELERATE_NEW_LAPACK=1" "-DACCELERATE_LAPACK_ILP64=1" "-DBLAS_ILP64=1" "-DLAPACK_ILP64=1")
         set( found true )
     endif()
 endif()
@@ -303,6 +303,6 @@ endif() # run_
 set( blas_config_cache "${BLAS_LIBRARIES}" CACHE INTERNAL "" )
 
 #-------------------------------------------------------------------------------
-message( DEBUG "
+message("
 blaspp_defs_ = '${blaspp_defs_}'
 ")

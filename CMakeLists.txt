@@ -129,7 +129,7 @@ set_property(
     CACHE lapack PROPERTY STRINGS
     "auto" "generic" )
 
-message( DEBUG "Settings:
+message( "Settings:
 CMAKE_VERSION          = ${CMAKE_VERSION}
 CMAKE_INSTALL_PREFIX   = ${CMAKE_INSTALL_PREFIX}
 CMAKE_BUILD_TYPE       = ${CMAKE_BUILD_TYPE}
